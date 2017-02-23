@@ -1,3 +1,7 @@
+body {
+  background-color: #B0E0E6;
+  /*padding: 20px;*/
+}
 h1 {
     color: black;
     text-align: center;
@@ -12,7 +16,7 @@ h2 {
   font-style: italic;
   /*text-decoration: line-through;*/
   letter-spacing: 3px;
-  font-family: "Arial Black", Gadget, sans-serif;
+  font-family: "Lucida Console", Gadget, sans-serif;
 }
 
 h3 {
@@ -28,7 +32,7 @@ a {
 }
 
 a:hover {
-  color: grey;
+  color: red;
 }
 
 .question-container {
@@ -64,6 +68,21 @@ li a:hover {
     background-color: #111;
 }
 
+form {
+  margin-left: 20px;
+}
+
+#page-header{
+  margin-top: 50px;
+}
+
+.all-question-list{
+  margin: 20px;
+  border: solid;
+  border-radius: 15px 50px;
+  padding: 15px; 
+}
+
 .imgContainer{
     float:left;
 }
@@ -79,4 +98,16 @@ li a:hover {
 
 .inline {
   margin-top: 100px;
+}
+
+input[type='submit'] {
+  border-color: black;
+}
+
+input[type="text"] {
+  border-color: grey;
+}
+
+input[type="password"] {
+  border-color: grey;
 }
