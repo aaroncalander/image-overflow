@@ -9,3 +9,9 @@ get '/questions/:id' do
   @answers = @question.answers
   erb :'questions/show'
 end
+
+post '/questions' do
+  @question = Question.new(params[:question])
+
+  redirect '/questions'
+end
