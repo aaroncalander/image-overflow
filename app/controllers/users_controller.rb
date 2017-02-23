@@ -6,7 +6,7 @@ post '/users' do
   @user = User.new(params[:user])
   if @user.save
     login(@user)
-    redirect '/users/profile'
+    redirect '/questions'
   else
     erb :'users/new'
   end

@@ -10,7 +10,7 @@ post '/login' do
 
   if @user.password == params[:user][:password]
     login(@user)
-    erb :'users/show'
+    redirect '/questions'
   else
     erb :'/sessions/login'
   end
