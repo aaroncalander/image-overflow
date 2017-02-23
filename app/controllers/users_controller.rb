@@ -13,5 +13,6 @@ post '/users' do
 end
 
 get '/users/profile' do
+  @questions = current_user.questions
   erb :'users/show'
 end
