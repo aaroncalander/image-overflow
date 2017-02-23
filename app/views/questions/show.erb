@@ -3,7 +3,9 @@
   <ol><%= answer.text %></ol>
 <% end %>
 
-<form id="answers" method="post" action="/questions/<%= @question.id %>/answers">
-  <input type="text" name="text" placeholder="answer">
-  <input type="submit" value="submit new answer">
-</form>
+<% if current_user %>
+  <form id="answers" method="post" action="/questions/<%= @question.id %>/answers">
+    <input type="text" name="text" placeholder="answer">
+    <input type="submit" value="submit new answer">
+  </form>
+<% end %>
