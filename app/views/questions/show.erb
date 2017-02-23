@@ -1,1 +1,4 @@
 <h1><%= @question.text %></h1>
+<% @answers.each do |answer| %>
+  <ol><%= answer.text %></ol>
+<% end %>
