@@ -1,0 +1,16 @@
+<h1>Welcome</h1>
+
+<% if @session == nil %>
+<a href="/sessions/new">Login</a>
+<% end %>
+<br>
+<% if @session != nil %>
+<a href="/users/<%= @session %>">View your profile</a>
+<% end %>
+
+<h3>Current Members</h3>
+<% @user.each do |person| %>
+<p>
+<%= person.first_name + " " + person.last_name %>
+</p>
+<% end %>
