@@ -1,5 +1,3 @@
-require 'faker'
-
 Answer.destroy_all
 Question.destroy_all
 User.destroy_all
@@ -13,13 +11,13 @@ end
 
 # create questions associated with a user
 users.each do |user|
-  user.questions.create(text: Faker::Lorem.sentence)
+  user.questions.create(text: Faker::Hipster.sentence, body: Faker::Hipster.paragraph)
 end
 
 questions = Question.all
 
 questions.each do |question|
-  question.answers.create(text: Faker::Lorem.sentence, user_id: users.sample.id)
+  question.answers.create(text: Faker::Hipster.sentence, user_id: users.sample.id)
 end
 
 answers = Answer.all
