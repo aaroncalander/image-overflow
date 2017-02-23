@@ -1,0 +1,82 @@
+h1 {
+    color: black;
+    text-align: center;
+    /*text-decoration: line-through;*/
+    letter-spacing: 3px;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+h2 {
+  color: black;
+  text-align: center;
+  font-style: italic;
+  /*text-decoration: line-through;*/
+  letter-spacing: 3px;
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+h3 {
+    color: black;
+    text-align: center;
+    /*text-decoration: line-through;*/
+    letter-spacing: 3px;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+  color: grey;
+}
+
+.question-container {
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.6;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.imgContainer{
+    float:left;
+}
+
+.upvote-button {
+  background-color: transparent;
+  border: none;
+  padding-top: 5px;
+  color: #8C8C8C;
+  vertical-align: sub;
+  padding: 1px 0px 0px 0px;
+}
+
+.inline {
+  display: inline;
+}
