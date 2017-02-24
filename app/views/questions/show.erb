@@ -1,3 +1,5 @@
+<img src="<%= @question.img_link %>" style="width:304px;height:228px;">
+
 <h1 id="page-header"><%= @question.body %></h1>
 <% @answers.each do |answer| %>
   <ol><%= answer.vote_count %><form class="upvote" action='/questions/<%= @question.id %>/answers/<%= answer.id %>/vote' method="POST">

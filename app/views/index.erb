@@ -1,6 +1,6 @@
 <h1 id="page-header">Welcome!</h1>
 <div class="all-question-list">
 <% @questions.each do |question| %>
-    <ol><a href="/questions/<%= question.id %>"><%= question.body %></a></ol>
+    <a href="/questions/<%= question.id%>"><img src="<%= question.img_link %>" style="width:304px;height:228px;"></a>
 <% end %>
 </div>
