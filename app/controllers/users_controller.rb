@@ -12,6 +12,8 @@ post '/users' do
   end
 end
 
-get '/users/profile' do
+get '/users/:id' do
+  @user = User.find_by(params[:user])
+  @questions = current_user.questions
   erb :'users/show'
 end
