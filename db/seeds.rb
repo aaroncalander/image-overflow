@@ -1,7 +1,6 @@
 Answer.destroy_all
 Question.destroy_all
 User.destroy_all
-Vote.destroy_all
 
 users = User.all
 
@@ -11,7 +10,7 @@ end
 
 # create questions associated with a user
 users.each do |user|
-  user.questions.create(text: Faker::Hipster.sentence, body: Faker::Hipster.paragraph)
+  user.questions.create(img_link: "http://i.giphy.com/6vWVzDv19i3MQ.gif", body: Faker::Hipster.paragraph)
 end
 
 questions = Question.all
@@ -21,7 +20,3 @@ questions.each do |question|
 end
 
 answers = Answer.all
-
-answers.each do |answer|
-  answer.votes.create(value: 1)
-end
