@@ -1,46 +1,7 @@
-<h3> You are currently logged in </h3>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
-<p>TA-DA</p>
+<h3 id="page-header"> You are currently logged in </h3>
+
+<%= erb :'questions/new', layout: false %>
+
+<% @questions.each do |question| %>
+   <ol><a href="/questions/<%= question.id %>"><%= question.text %></a></ol>
+<% end %>
