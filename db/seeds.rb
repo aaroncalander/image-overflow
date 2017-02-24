@@ -22,6 +22,6 @@ end
 
 answers = Answer.all
 
-answers.each do |answer|
-  answer.votes.create(value: 1)
-end
+# answers.each do |answer|
+#   answer.votes.create(value: 1)
+# end
