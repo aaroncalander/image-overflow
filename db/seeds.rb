@@ -1,7 +1,6 @@
 Answer.destroy_all
 Question.destroy_all
 User.destroy_all
-Vote.destroy_all
 
 users = User.all
 
@@ -21,7 +20,3 @@ questions.each do |question|
 end
 
 answers = Answer.all
-
-# answers.each do |answer|
-#   answer.votes.create(value: 1)
-# end

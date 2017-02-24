@@ -40,7 +40,6 @@ end
 put '/questions/:question_id/answers/:id/vote' do
   @question = Question.find_by(id: params[:question_id])
   @answer = Answer.find_by(id: params[:id])
-  # @answer = Answer.find_by(params[:answer])
   @answer.increment!(:vote_count, 1)
 
   if request.xhr?
