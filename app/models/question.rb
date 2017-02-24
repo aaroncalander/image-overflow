@@ -2,5 +2,5 @@ class Question < ActiveRecord::Base
   belongs_to :user
   has_many :answers
 
-  validates :text, presence: true
+  validates :img_link, presence: true
 end
