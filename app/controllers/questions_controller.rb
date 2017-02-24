@@ -36,3 +36,16 @@ post '/questions/:id/answers' do
     "Hello World"
   end
 end
+
+put '/questions/:question_id/answers/:id/vote' do
+  @question = Question.find_by(id: params[:question_id])
+  @answer = Answer.find_by(params[:answer])
+  @answer.votes = @votes
+  @votes.increment!(:value)
+
+  if request.xhr?
+    @votes.value.to_s
+  else
+    redirect "/questions/#{@question.id}"
+  end
+end

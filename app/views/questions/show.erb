@@ -1,6 +1,9 @@
 <h1 id="page-header"><%= @question.body %></h1>
 <% @answers.each do |answer| %>
-  <ol><%= answer.text %></ol>
+  <ol><form class="upvote" action='/questions/<%= @question.id %>/answers/<%= answer.id %>/vote' method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <input type="submit" class="answer_upvote_button" value="👍 ">
+  </form><%= answer.text %></ol>
 <% end %>
 
 <% if current_user %>
