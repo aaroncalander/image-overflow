@@ -1,0 +1,6 @@
+<h1 id="page-header">Welcome!</h1>
+<div class="all-question-list">
+<% @questions.each do |question| %>
+    <ol><a href="/questions/<%= question.id %>"><%= question.text %></a></ol>
+<% end %>
+</div>
