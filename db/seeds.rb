@@ -10,7 +10,7 @@ end
 
 # create questions associated with a user
 users.each do |user|
-  user.questions.create(img_link: Faker::Internet.url, body: Faker::Hipster.paragraph)
+  user.questions.create(img_link: "http://i.giphy.com/6vWVzDv19i3MQ.gif", body: Faker::Hipster.paragraph)
 end
 
 questions = Question.all
