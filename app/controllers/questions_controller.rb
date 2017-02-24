@@ -27,5 +27,12 @@ get '/questions/:id/answers' do
 end
 
 post '/questions/:id/answers' do
-  "Hello World"
+  @question = Question.find_by(id: params[:id])
+  @answer = Answer.new(params[:answer])
+  @answer.question = @question
+  if @answer.save
+    redirect "/questions/#{@question.id}"
+  else
+    "Hello World"
+  end
 end
