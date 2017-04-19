@@ -21,3 +21,4 @@ A Stack Overflow clone that allows registered users to post photos or GIFs and t
 You can view the application by visiting the following link:
 
 <https://dark-overflow.herokuapp.com>
+
