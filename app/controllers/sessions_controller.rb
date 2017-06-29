@@ -5,9 +5,6 @@ end
 post '/login' do
   @user = User.find_by(username: params[:user][:username])
 
-  p @user
-  p params
-
   if @user.password == params[:user][:password]
     login(@user)
     redirect '/questions'

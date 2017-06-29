@@ -33,7 +33,7 @@ post '/questions/:id/answers' do
   if @answer.save
     redirect "/questions/#{@question.id}"
   else
-    "Hello World"
+    "Please try again!"
   end
 end
 
@@ -44,6 +44,18 @@ put '/questions/:question_id/answers/:id/vote' do
 
   if request.xhr?
     @answer.vote_count.to_s
+  else
+    redirect "/questions/#{@question.id}"
+  end
+end
+
+put '/questions/:question_id/answers/:id/downvote' do
+  @question = Question.find_by(id: params[:question_id])
+  @answer = Answer.find_by(id: params[:id])
+  @answer.increment!(:downvote_count, by=1)
+
+  if request.xhr?
+    @answer.downvote_count.to_s
   else
     redirect "/questions/#{@question.id}"
   end
