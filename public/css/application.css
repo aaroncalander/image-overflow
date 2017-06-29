@@ -1,5 +1,5 @@
 body {
-  background-color: #B0E0E6;
+  background-color: #E6E6E6;
   /*padding: 20px;*/
 }
 h1 {
@@ -75,12 +75,81 @@ form {
 #page-header{
   margin-top: 50px;
 }
+#nav-bar a {
+  color: #8B4513;
+}
+#nav-bar a:hover {
+  color: red;
+}
+
+.question-image {
+ /* align-content: center;*/
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.response-table {
+  border: solid;
+  border-width: 1px;
+  border-radius: 25px;
+  margin-bottom: 15px;
+}
+
+.answer-text{
+  text-align: left;
+}
+
+#vote-button{
+  margin-left: 10px;
+
+}
+.upvote-count{
+  float: left;
+  margin-top: 15px;
+  margin-right: 5px;
+  color: green;
+}
+.downvote-count{
+  float: left;
+  margin-top: 15px;
+  margin-right: 5px;
+  color: red;
+}
+.answer-upvote-button{
+margin-top: 10px;
+}
+
+.answer-downvote-button{
+  width: 36.08px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 
 .all-question-list{
-  margin: 20px;
+  margin: 15px;
   border: solid;
-  border-radius: 15px 50px;
-  padding: 15px; 
+  border-width: 1px;
+  border-radius: 25px 25px;
+  padding: 15px;
+}
+
+.all-question-list img{
+  border-radius: 10px;
+}
+
+.all-question-list img{
+  outline: 1px solid #E6E6E6;
+  border: 4px solid transparent;
+}
+.all-question-list img:hover {
+  outline: 0px solid transparent;
+  border: 4px solid #B73BCA;
+}
+
+.show-page-image {
+  margin-top: 50px;
 }
 
 .imgContainer{
@@ -94,6 +163,12 @@ form {
   color: #8C8C8C;
   vertical-align: sub;
   padding: 1px 0px 0px 0px;
+}
+
+.answer-text-box{
+  width: 500px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .inline {

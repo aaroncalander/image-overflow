@@ -1,24 +1,28 @@
-<img src="<%= @question.img_link %>" style="width:304px;height:228px;">
+<center>
+  <img class="show-page-image" src="<%= @question.img_link %>" style="width:415px;height:340px;">
+</center>
 
 <h1 id="page-header"><%= @question.body %></h1>
 
+<div id="answer-div">
 <center>
-<% @answers.each do |answer| %>
-<table style="width:75%">
-  <tr>
-    <td><%= answer.vote_count %><form class="upvote" action='/questions/<%= @question.id %>/answers/<%= answer.id %>/vote' method="POST">
+  <% @answers.each do |answer| %>
+  <table class="response-table" style="width:75%">
+    <tr >
+      <td><span id="vote-button" class="upvote-count"><%= answer.upvote_count %></span><form class="upvote" action='/questions/<%= @question.id %>/answers/<%= answer.id %>/upvote' method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <input type="submit" class="answer-upvote-button" value="👍 ">
+      </form><span id ="vote-button" class="downvote-count"><%= answer.downvote_count %></span><form class="downvote" action='/questions/<%= @question.id %>/answers/<%= answer.id %>/downvote' method="POST">
       <input type="hidden" name="_method" value="PUT">
-      <input type="submit" class="answer_upvote_button" value="👍 ">
+      <input type="submit" class="answer-downvote-button" value="👎  ">
     </form></td>
-    <td><%= answer.text %></td>
+    <td class="answer-text" ><%= answer.text %></td>
   </tr>
 </table>
 <% end %>
+</div>
 
 <% if current_user %>
-  <form id="answers" method="post" action="/questions/<%= @question.id %>/answers">
-    <input type="text" name="answer[text]" placeholder="answer">
-    <input type="submit" value="submit new answer">
-  </form>
+  <%= erb :'questions/_answer', { layout: false, locals: {question: @question}} %>
 <% end %>
 </center>
